@@ -29,7 +29,7 @@ cat $CALICO_ALL |awk '{print $5}'|sort |uniq -c |sort -n |grep -v " 1" >$CALICO_
 cat $CALICO_CONFLICT
 
 echo "-------- kubenetes ip confict -----"
-k8S_CONFLICT=k8s.conflict.ip.dat
+K8S_CONFLICT=k8s.conflict.ip.dat
 cat $K8S_ALL |awk '{ print $7 }'|grep -v none|grep -v "="|grep -v "10.39" |sort |uniq -c |sort -n |grep -v "1 " >$K8S_CONFLICT
 cat $K8S_CONFLICT
 
