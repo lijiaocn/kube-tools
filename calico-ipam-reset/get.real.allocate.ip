@@ -1,0 +1,24 @@
+#!/bin/bash
+# $1: node
+# $2: start
+# etcdctl get /calico/ipam/v2/assignment/ipv4/block/192.168.106.64-26  |jq "." |less
+
+node=$1
+start=$2
+
+# $1: node-name
+# $2: start index
+compute_used_ip_offset(){
+	local node=$1
+	local start=$2
+	for ip_value in `calicoctl get workloadendpoints --node=$node -o wide |awk '{ if (NR>1) print $5 }' | sed  "s/\([0-9]*\.\)\{3\}//" |sed "s/\/32//"`
+	do
+		let ip_offset=$ip_value-$start
+		echo "$ip_offset"
+	done
+}
+
+# test
+#node="dev-slave-108"
+#start=64
+compute_used_ip_offset $node $start |sort -g

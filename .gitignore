@@ -1,0 +1,6 @@
+*.dat
+*.swp
+*.log
+output
+pod.rebuild.sh
+back_output

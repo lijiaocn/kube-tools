@@ -1,0 +1,29 @@
+#!/bin/bash
+# $1: node
+# $2: start
+
+node=$1
+start=$2
+
+#test
+#node="dev-slave-108"
+#start=64
+allocate_ips=`./get.real.allocate.ip $node $start`
+
+i=0
+while [ $i -lt 64 ];do
+	used=0
+
+	for ip in $allocate_ips
+	do
+		if [[ "$i" == "$ip" ]];then
+			used=1
+			break	
+		fi
+	done
+
+	if [[ "$used" == "0" ]];then
+		echo $i
+	fi
+	let i+=1
+done

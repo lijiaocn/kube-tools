@@ -1,0 +1,4 @@
+NODE               ORCHESTRATOR   WORKLOAD                                                          NAME   NETWORKS             NATS   INTERFACE         PROFILES                                
+master-62          k8s            kube-system.filebeat-7fk00                                        eth0   192.168.163.30/32           cali7caacc57bc9   k8s_ns.kube-system                      
+master-62          k8s            kube-system.kubectl-lrjt5                                         eth0   192.168.163.29/32           calie5bde83e82c   k8s_ns.kube-system                      
+master-63          k8s            kube-system.filebeat-0wyr1                                        eth0   192.168.169.217/32          calid16c9f6decb   k8s_ns.kube-system                      
