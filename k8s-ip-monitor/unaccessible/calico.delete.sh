@@ -1,0 +1,13 @@
+calicoctl delete workloadendpoint eth0 --node=proxy-36 --workload=kube-system.filebeat-xswp7 --orchestrator=k8s
+calicoctl delete workloadendpoint eth0 --node=proxy-36 --workload=kube-system.kubectl-71ggz --orchestrator=k8s
+calicoctl delete workloadendpoint eth0 --node=proxy-37 --workload=kube-system.filebeat-0m3zs --orchestrator=k8s
+calicoctl delete workloadendpoint eth0 --node=proxy-37 --workload=kube-system.kubectl-kw9br --orchestrator=k8s
+calicoctl delete workloadendpoint eth0 --node=proxy-48 --workload=kube-system.filebeat-r175d --orchestrator=k8s
+calicoctl delete workloadendpoint eth0 --node=proxy-48 --workload=kube-system.kubectl-ss52f --orchestrator=k8s
+calicoctl delete workloadendpoint eth0 --node=proxy-84 --workload=kube-system.filebeat-c2lv8 --orchestrator=k8s
+calicoctl delete workloadendpoint eth0 --node=proxy-84 --workload=kube-system.kubectl-xmmnc --orchestrator=k8s
+calicoctl delete workloadendpoint eth0 --node=proxy-85 --workload=kube-system.filebeat-xz9wj --orchestrator=k8s
+calicoctl delete workloadendpoint eth0 --node=proxy-85 --workload=kube-system.kubectl-bg0m4 --orchestrator=k8s
+calicoctl delete workloadendpoint eth0 --node=slave-193 --workload=icome-dev.imserver-2441568919-ay3kq --orchestrator=k8s
+calicoctl delete workloadendpoint eth0 --node=slave-193 --workload=icome-dev.licensor-882070153-b8np2 --orchestrator=k8s
+calicoctl delete workloadendpoint eth0 --node=slave-193 --workload=yuntu-www-idc.tmsservice-idc-2198550893-v4s42 --orchestrator=k8s
