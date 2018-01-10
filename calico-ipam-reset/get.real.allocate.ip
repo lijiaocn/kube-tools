@@ -16,6 +16,9 @@ compute_used_ip_offset(){
 		let ip_offset=$ip_value-$start
 		echo "$ip_offset"
 	done
+	tunnel_ip=`etcdctl get  /calico/v1/host/$1/config/IpInIpTunnelAddr | sed  "s/\([0-9]*\.\)\{3\}//"`
+	let ip_offset=$tunnel_ip-$start
+	echo "$ip_offset"
 }
 
 # test
