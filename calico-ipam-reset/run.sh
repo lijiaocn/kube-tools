@@ -76,5 +76,5 @@ do
 	etcdctl get $i |jq ".">$result/$host.bak.json
 
 # uncomment this line to update ipam data in etcd 
-#	etcdctl set $i "`cat $result/$host.json`" >/dev/null
+	etcdctl set $i "`cat $result/$host.json`" >/dev/null
 done
