@@ -19,6 +19,6 @@ spec:
   profiles:
   - k8s_ns.kube-system
 EOF
-calicoctl replace -f /tmp/hostendpoint.yaml
+calicoctl create -f /tmp/hostendpoint.yaml
 done
 calicoctl get hostendpoint -o wide
