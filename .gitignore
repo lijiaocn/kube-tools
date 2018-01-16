@@ -4,3 +4,4 @@
 output
 pod.rebuild.sh
 back_output
+k8s-ip-monitor/unaccessible/calico.delete.sh
